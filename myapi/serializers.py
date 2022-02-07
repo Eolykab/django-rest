@@ -23,6 +23,7 @@ class StatusSerializer(serializers.Serializer):
     status = serializers.CharField(max_length=200)
     notes = serializers.CharField()
     date = serializers.DateTimeField(required=False)    
+    installation_id = serializers.IntegerField()    
 
     def create(self, validated_data):
         return Status.objects.create(**validated_data)

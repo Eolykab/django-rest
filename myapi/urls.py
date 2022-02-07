@@ -5,7 +5,7 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'create/installation', views.InstallationViewSet, basename='installation')
-router.register(r'status', views.StatusViewSet, basename='status')
+router.register(r'status', views.StatusViewSet)
 
 
 urlpatterns = [
